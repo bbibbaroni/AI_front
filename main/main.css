@@ -52,7 +52,7 @@
     float: left;
     width: 20px;
     height: 490px;
-    animation: scale1 ease-in 1s;
+    animation: scale1 ease-in 2s;
     animation-fill-mode: forwards;
     transform-origin: bottom;
 }
@@ -66,27 +66,36 @@
 }
 @keyframes scale1 {
     0%{
-        transform: scaleY(0.9) translateY(-500px);
-    }
-    25%{
-        transform: scaleY(0.9) translateY(-450px);
+        transform: scaleY(0.9) translateY(-700px);
     }
     50%{
-        transform: scaleY(0.9) translateY(-350px);
+        transform: scaleY(0.9) translateY(0px);
     }
-    75%{
-        transform: scaleY(0.9) translateY(-200px);
+    60%{
+        transform: scaleY(0.93) translateY(0px);
+    }
+    70%{
+        transform: scaleY(0.9) translateY(0px);
     }
     100%{
         transform: scaleY(0.9) translateY(0px);
     }
 }
 @keyframes scale2 {
-    30%{
-        transform: scaleY(0.9) translateY(500px);
+    0%{
+        transform: scaleY(0.9) translateY(-700px);
     }
-    50%{
-        transform: scaleY(0.9) translateY(400px);
+    30%{
+        transform: scaleY(0.9) translateY(-700px);
+    }
+    70%{
+        transform: scaleY(0.9) translateY(0px);
+    }
+    80%{
+        transform: scaleY(0.93) translateY(0px);
+    }
+    90%{
+        transform: scaleY(0.9) translateY(0px);
     }
     100%{
         transform: scaleY(0.9) translateY(0px);

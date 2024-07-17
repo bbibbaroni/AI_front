@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>식구 : 설문조사</title>
+</head>
+<body>
+    <div class="container">
+        <form id="surveyForm" action="form-end/form-end.html" method="post">
+            <div class="frame" id="diabetes">
+                <div class="st">더욱 정확한 추천을 위해 설문을 해주세요!</div>
+                <div class="bt">Q:당뇨가 있으신가요?</div>
+                <div class="diabetes_form">
+                    <div class="custom-radio">
+                        <input type="radio" name="diabetes_option" value="a" id="option1"/>
+                        <label class="custom-radio-span" for="option1"></label>
+                        <label class="textbox" for="option1">제1형 당뇨병(인슐린의존성 당뇨병)</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" name="diabetes_option" value="a" id="option2"/>
+                        <label class="custom-radio-span" for="option2"></label>
+                        <label class="textbox" for="option2">제2형 당뇨병(인슐린 비의존형 당뇨병)</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" name="diabetes_option" value="a" id="option3"/>
+                        <label class="custom-radio-span" for="option3"></label>
+                        <label class="textbox" for="option3">이차성 당뇨병</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" name="diabetes_option" value="a" id="option4"/>
+                        <label class="custom-radio-span" for="option4"></label>
+                        <label class="textbox" for="option4">임신성 당뇨병</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" name="diabetes_option" value="a" id="option5"/>
+                        <label class="custom-radio-span" for="option5"></label>
+                        <label class="textbox" for="option5">내당능 장애와 공복혈당 장애</label>
+                    </div>
+                </div>
+                <div class="vst"><span>※당뇨가 없으시다면 넘어가 주세요.</span></div>
+                <button type="button" class="custom-button" onclick="showVegetarian()">다음으로</button>
+            </div>
+            <div class="frame" id="vegetarian">
+                <div class="st">더욱 정확한 추천을 위해 설문을 해주세요!</div>
+                <div class="bt">Q:채식주의자이신가요?</div>
+                <div class="vegetarian_form">
+                    <div class="custom-radio">
+                        <input type="radio" name="vegetarian_option" value="a" id="option6"/>
+                        <label class="custom-radio-span" for="option6"></label>
+                        <label class="textbox" for="option6">비건(Vegan)</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" name="vegetarian_option" value="a" id="option7"/>
+                        <label class="custom-radio-span" for="option7"></label>
+                        <label class="textbox" for="option7">락토 베지테리언(Lacto vegetarian)</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" name="vegetarian_option" value="a" id="option8"/>
+                        <label class="custom-radio-span" for="option8"></label>
+                        <label class="textbox" for="option8">오보 베지테리언(Ovo vegetarian)</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" name="vegetarian_option" value="a" id="option9"/>
+                        <label class="custom-radio-span" for="option9"></label>
+                        <label class="textbox" for="option9">락토 오보 베지테리언 (Lacto-ovo vegetarian)</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" name="vegetarian_option" value="a" id="option10"/>
+                        <label class="custom-radio-span" for="option10"></label>
+                        <label class="textbox" for="option10">페스코 베지테리언(Pesco-vegetarian)</label>
+                    </div>
+                </div>
+                <div class="vst"><span>※채식주의자가 아니라면 넘어가 주세요.</span></div>
+                <button type="button" class="custom-button" onclick="showAllerge()">다음으로</button>
+            </div>
+            <div class="frame" id="allerge">
+                <div class="st">더욱 정확한 추천을 위해 설문을 해주세요!</div>
+                <div class="bt">Q:알러지가 있으신가요?</div>
+                <div class="allerge_form">
+                    <div class="check">
+                        <input type="checkbox" name="allerge_option" value="a" id="option11"/>
+                        <label class="custom-checkbox" for="option11"></label>
+                        <label class="checklabel" for="option11">달걀 알레르기</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="allerge_option" value="a" id="option12"/>
+                        <label class="custom-checkbox" for="option12"></label>
+                        <label class="checklabel" for="option12">우유 알레르기</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="allerge_option" value="a" id="option13"/>
+                        <label class="custom-checkbox" for="option13"></label>
+                        <label class="checklabel" for="option13">밀 알레르기</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="allerge_option" value="a" id="option14"/>
+                        <label class="custom-checkbox" for="option14"></label>
+                        <label class="checklabel" for="option14">땅콩 알레르기</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="allerge_option" value="a" id="option15"/>
+                        <label class="custom-checkbox" for="option15"></label>
+                        <label class="checklabel" for="option15">콩 알레르기</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="allerge_option" value="a" id="option16"/>
+                        <label class="custom-checkbox" for="option16"></label>
+                        <label class="checklabel" for="option16">생선 알레르기</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="allerge_option" value="a" id="option17"/>
+                        <label class="custom-checkbox" for="option17"></label>
+                        <label class="checklabel" for="option17">바나나 알레르기</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="allerge_option" value="a" id="option18">
+                        <label class="custom-checkbox" for="option18"></label>
+                        <label class="checklabel" for="option18">밤 알레르기</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="allerge_option" value="a" id="option19"/>
+                        <label class="custom-checkbox" for="option19"></label>
+                        <label class="checklabel" for="option19">꿀 알레르기</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="allerge_option" value="a" id="option20"/>
+                        <label class="custom-checkbox" for="option20"></label>
+                        <label class="checklabel" for="option20">고추 알레르기</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="allerge_option" value="a" id="option21"/>
+                        <label class="custom-checkbox" for="option21"></label>
+                        <label class="checklabel" for="option21">잣 알레르기</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="allerge_option" value="a" id="option22"/>
+                        <label class="custom-checkbox" for="option22"></label>
+                        <label class="checklabel" for="option22">조개 알레르기</label>
+                    </div>
+                </div>
+                <input type="text" name="anyallerge" placeholder="그 외의 알러지를 작성해 주세요." class="anyAllerge">
+                <div class="vst"><span>※알레르기가 없다면 넘어가 주세요.</span></div>
+                <button type="button" class="custom-button" onclick="showHatefood()">다음으로</button>
+            </div>
+            <div class="frame" id="hatefood">
+                <div class="st">더욱 정확한 추천을 위해 설문을 해주세요!</div>
+                <div class="bt">Q:싫어하는 음식이 있으신가요?</div>
+                <div class="allerge_form">
+                    <div class="check">
+                        <input type="checkbox" name="hatefood_option" value="a" id="option23"/>
+                        <label class="custom-checkbox" for="option23"></label>
+                        <label class="checklabel" for="option23">버섯 싫어요!</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="hatefood_option" value="a" id="option24"/>
+                        <label class="custom-checkbox" for="option24"></label>
+                        <label class="checklabel" for="option24">미역 싫어요!</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="hatefood_option" value="a" id="option25"/>
+                        <label class="custom-checkbox" id="option25"></label>
+                        <label class="checklabel" for="option25">생선 싫어요!</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="hatefood_option" value="a" id="option26"/>
+                        <label class="custom-checkbox" for="option26"></label>
+                        <label class="checklabel" for="option26">굴 싫어요!</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="hatefood_option" value="a" id="option27"/>
+                        <label class="custom-checkbox" for="option27"></label>
+                        <label class="checklabel" for="option27">토마토 싫어요!</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="hatefood_option" value="a" id="option28"/>
+                        <label class="custom-checkbox" for="option28"></label>
+                        <label class="checklabel" for="option28">오이 싫어요!</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="hatefood_option" value="a" id="option29"/>
+                        <label class="custom-checkbox" for="option29"></label>
+                        <label class="checklabel" for="option29">건어물 싫어요!</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="hatefood_option" value="a" id="option30">
+                        <label class="custom-checkbox" for="option30"></label>
+                        <label class="checklabel" for="option30">피망 싫어요!</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="hatefood_option" value="a" id="option31"/>
+                        <label class="custom-checkbox" for="option31"></label>
+                        <label class="checklabel" for="option31">다시마 싫어요!</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="hatefood_option" value="a" id="option32"/>
+                        <label class="custom-checkbox" for="option32"></label>
+                        <label class="checklabel" for="option32">고수 싫어요!</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="hatefood_option" value="a" id="option33"/>
+                        <label class="custom-checkbox" for="option33"></label>
+                        <label class="checklabel" for="option33">무 싫어요!</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="hatefood_option" value="a" id="option34"/>
+                        <label class="custom-checkbox" for="option34"></label>
+                        <label class="checklabel" for="option34">고구마 싫어요!</label>
+                    </div>
+                </div>
+                <input type="text" name="anyhatefood" placeholder="그 외의 알러지를 작성해 주세요." class="anyhatefood">
+                <div class="vst"><span>※알레르기가 없다면 넘어가 주세요.</span></div>
+                <input type="submit" class="custom-button" value="완료하기">
+            </div>
+        </form>
+        <div class="img">
+        </div>
+    </div>
+    <script src="form.js?after"></script>
+</body>
+</html>
