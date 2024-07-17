@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+*{margin: 0px; font-family: "Inter", sans-serif;}
+#header{
+    padding: 25px;
+    height: 30px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_logo_img{
+    width: 60px;
+}
+.account{
+    font-size: 22px;
+    font-weight: 600;
+    /* position: absolute;
+    top: 25px;
+    right: 40px; */
+}
+.sign{
+    color: black;
+    text-decoration: none;
+    margin: 0px 40px;
+}
+
+#container{
+    height: 820px;
+    overflow: hidden;
+}
+#main{
+    font-weight: 900;
+    height: 500px;
+    overflow: visible;
+    border-top: 8px solid black;
+    border-bottom: 8px solid black;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #FFC10C;
+    text-align: center;
+}
+#main_chopsticks{
+    position: absolute;
+    left: 170px;
+}
+#main_spoon{
+    position: absolute;
+    right: 130px;
+}
+#main_contents{
+    margin: 81px auto;
+}
+#main_text{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+#main_logo{
+    height: 170px;
+}
+#main_logo_text{
+    font-size: 20px;
+    margin: 5px 0px;
+}
+#main_btn{
+    margin-top: 25px;
+    border-radius: 70px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 35px;
+    letter-spacing: 4.2px;
+    padding: 11px 58px;
+    border: none;
+}
+#main_btn:hover{
+    cursor: pointer;
+}
+#background{
+    height: 320px;
+    position: relative;
+}
+#plate1{
+    position: absolute;
+    top: 0px;
+    left: 585px;
+}
+#plate2{
+    position: absolute;
+    bottom: 0px;
+    left: 167px;
+}
+#bowl{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
