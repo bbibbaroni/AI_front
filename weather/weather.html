@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨 페이지</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            background: #000;
+            width: 1440px;
+            height: 900px;
+            position :relative;
+        }
+        .frame1 {
+            width: 890px;
+            height: 900px;
+            background-color: #fff;
+            padding: 103px 149px 140px 149px;
+        }
+        .img {
+            width: 550px;
+            height: 900px;
+            background: cornflowerblue;
+        }
+        .img img {
+            width: 100%;
+            height: 100%;
+        }
+        .st {
+            color: #888;
+            text-align: center;
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 1.6px;
+        }
+        .bt {
+            color: rgba(0, 0, 0, 0.85);
+            text-align: center;
+            font-family: Inter, sans-serif;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 4px;
+        }
+        .vst {
+            color: #696969;
+            font-family: Inter, sans-serif;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 47px;
+        }
+        /* 기본 스타일 숨기기 */
+        input[type="radio"] {
+            display: none;
+        }
+        /* 라벨 스타일 */
+        .custom-radio {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            cursor: pointer;
+            position:relative;
+        }
+        /* 커스텀 라디오 버튼 스타일 */
+        .custom-radio-span {
+            width: 32px;
+            height: 32px;
+            border: 2px solid #d9d9d9;
+            background-color:#d9d9d9;
+            border-radius: 50%;
+            margin-right: 10px;
+            position: relative;
+        }
+        /* 라디오 버튼이 체크된 상태 스타일 */
+        input[type="radio"]:checked + .custom-radio-span::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            background-color: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        /* 라디오 버튼이 체크되었을 때 텍스트와 슬라이더 색상 변경 */
+        input[type="radio"]:checked + .custom-radio-span + .weather {
+            border : 3px solid red;
+            border-radius:100%;
+            padding-left: 15px;
+            padding-right: 5px;
+            padding-top:45px;
+            padding-bottom:30px;
+        }
+        .weather {
+            color: #000;
+            text-align: center;
+            font-family: Inter;
+            font-size: 100px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px; /* 30% */
+            letter-spacing: 10px;
+            margin-left :120px;
+        }
+        .checkmark-container {
+            position: absolute;
+            top: 10px; /* 적절한 위치 설정 */
+            right: 10px; /* 적절한 위치 설정 */
+            width: 248px;
+            height: 248px;
+            margin-right: 595px;
+            margin-top : 102px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="frame1">
+            <form id="surveyForm">
+                <div style="margin-bottom: 24px;"><span class="st">더욱 정확한 추천을 위해 설문을 해주세요!</span></div>
+                <div style="margin-bottom: 67px;"><span class="bt">Q:오늘 날씨는 어때요?</span></div>
+                <div style="margin-bottom: 131px;">
+                    <label class="custom-radio" for="option1">
+                        <input type="radio" id="option1" name="options" value="a">
+                        <span class="custom-radio-span"></span>
+                        <span class="weather">🔆</span>
+                    </label>
+                </div>
+                <div style="margin-bottom: 131px;">
+                    <label class="custom-radio" for="option2">
+                        <input type="radio" id="option2" name="options" value="a">
+                        <span class="custom-radio-span"></span>
+                        <span class="weather">☁️</span>
+                    </label>
+                    
+                </div>
+                <div style="margin-bottom: 131px;">
+                    <label class="custom-radio" for="option3">
+                        <input type="radio" id="option3" name="options" value="a">
+                        <span class="custom-radio-span"></span>
+                        <span class="weather">🌧️</span>
+                    </label>
+                </div>
+                <div style="margin-bottom: 131px;">
+                    <label class="custom-radio" for="option4">
+                        <input type="radio" id="option4" name="options" value="a">
+                        <span class="custom-radio-span"></span>
+                        <div class="weather">❄️</div>
+                    </label>
+                    
+                </div>
+            </form>
+        </div>
+        <div class="img">
+            <img src="./Frame 12.png" alt="Image">
+        </div>
+        <div class="checkmark-container">
+            <img src="./Group 29.png" alt="Checkmark">
+        </div>
+    </div>
+</body>
+</html>
