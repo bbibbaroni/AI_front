@@ -88,13 +88,13 @@
     30%{
         transform: scaleY(0.9) translateY(-700px);
     }
-    70%{
+    55%{
         transform: scaleY(0.9) translateY(0px);
     }
-    80%{
+    65%{
         transform: scaleY(0.93) translateY(0px);
     }
-    90%{
+    75%{
         transform: scaleY(0.9) translateY(0px);
     }
     100%{
@@ -119,6 +119,7 @@
         transform: rotate(0deg);
     }
 }
+
 #main_contents{
     margin: 81px auto;
 }
@@ -146,6 +147,7 @@
 }
 #main_btn:hover{
     cursor: pointer;
+    background-color: #222;
 }
 #background{
     height: 320px;

@@ -138,6 +138,7 @@ input[type="radio"]:checked + .custom-radio-span::before {
 input[type="checkbox"]{
     display: none;
 }
+
 .custom-checkbox{
     display: inline-block;
     width: 32px;
@@ -145,6 +146,7 @@ input[type="checkbox"]{
     border-radius: 16px;
     background-color: #D9D9D9;
     margin-right: 15px;
+    overflow: visible;
 }
 .checklabel{
     background-color: #EFEFEF;
@@ -153,8 +155,8 @@ input[type="checkbox"]{
     border-radius: 20px;
     padding: 20px;
 }
-input[type="checkbox"]:checked + .custom-checkbox{
-    background-color: greenyellow;
+input[type="checkbox"]:checked + .custom-checkbox::before{
+    content: url('../images/check.png');
 }
 .anyAllerge{
     width: 100%;
