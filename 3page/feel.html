@@ -78,12 +78,14 @@
             align-items: center;
             margin: 10px 0;
             cursor: pointer;
+            position:relative;
         }
         /* 커스텀 라디오 버튼 스타일 */
         .custom-radio-span {
             width: 32px;
             height: 32px;
             border: 2px solid #d9d9d9;
+            background-color:#d9d9d9;
             border-radius: 50%;
             margin-right: 10px;
             position: relative;
@@ -93,7 +95,7 @@
             content: "";
             width: 18px;
             height: 18px;
-            background-color: #d9d9d9;
+            background-color: #000;
             border-radius: 50%;
             position: absolute;
             top: 50%;
@@ -101,7 +103,7 @@
             transform: translate(-50%, -50%);
         }
         .feel {
-            color: #000;
+            color: #00000080;
 text-align: center;
 font-family: Inter;
 font-size: 40px;
@@ -111,28 +113,21 @@ line-height: 30px; /* 75% */
 letter-spacing: 4px;
 margin-left : 102px;
         }
-        .custom-button {
-            width: 100%;
-            display: inline-block;
-            padding: 15px 40px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #fff;
-            background-color: #f4c04e;
-            border: none;
-            border-radius: 25px;
-            text-align: center;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .custom-button:hover {
-            background-color: #e0a838;
-        }
         .range {
-           width:400px;
-           accent-color:#FFE496 ;
-           margin-left:70px;
+            width: 400px;
+            accent-color: #FFE496; /* 체크 안 됐을 때의 색상 */
+            margin-top: 20px; /* 슬라이더와 텍스트 간격 */
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        /* 라디오 버튼이 체크되었을 때 텍스트와 슬라이더 색상 변경 */
+        input[type="radio"]:checked + .custom-radio-span + .feel {
+            color: #000; /* 체크되었을 때 텍스트 색상 */
+        }
+        input[type="radio"]:checked + .custom-radio-span + .feel + .range {
+            accent-color: #FFC10C; /* 체크되었을 때 슬라이더 색상 */
         }
     </style>
 </head>
@@ -147,32 +142,34 @@ margin-left : 102px;
                         <input type="radio" id="option1" name="options" value="a">
                         <span class="custom-radio-span"></span>
                         <span class="feel">😁행복해요</span>
+                        <input type="range" class="range" min="0" max="100" value="15">
                     </label>
-                    <input type="range" class="range">
                 </div>
                 <div style="margin-bottom: 101px;">
                     <label class="custom-radio" for="option2">
                         <input type="radio" id="option2" name="options" value="a">
                         <span class="custom-radio-span"></span>
                         <span class="feel">😡화나요</span>
+                        <input type="range" class="range" min="0" max="100" value="15">
                     </label>
-                    <input type="range" class="range">
+                    
                 </div>
                 <div style="margin-bottom: 101px;">
                     <label class="custom-radio" for="option3">
                         <input type="radio" id="option3" name="options" value="a">
                         <span class="custom-radio-span"></span>
                         <span class="feel">😢슬퍼요</span>
+                        <input type="range" class="range" min="0" max="100" value="15">
                     </label>
-                    <input type="range" class="range">
                 </div>
                 <div style="margin-bottom: 101px;">
                     <label class="custom-radio" for="option4">
                         <input type="radio" id="option4" name="options" value="a">
                         <span class="custom-radio-span"></span>
                         <div class="feel">😞무기력해요</div>
+                        <input type="range" class="range" min="0" max="100" value="15">
                     </label>
-                    <input type="range" class="range">
+                    
                 </div>
             </form>
         </div>
