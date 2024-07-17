@@ -7,6 +7,7 @@
     position: relative;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
 }
 .header_logo_img{
     width: 60px;
@@ -39,13 +40,72 @@
     background-color: #FFC10C;
     text-align: center;
 }
+
+
 #main_chopsticks{
     position: absolute;
     left: 170px;
+    width: 60px;
+    height: 490px;
 }
+#chopstick1{
+    float: left;
+    width: 20px;
+    height: 490px;
+    animation: scale1 ease-in 1s;
+    animation-fill-mode: forwards;
+    transform-origin: bottom;
+}
+#chopstick2{
+    float: right;
+    width: 20px;
+    height: 490px;
+    animation: scale2 ease-in 1s;
+    animation-fill-mode: forwards;
+    transform-origin: bottom;
+}
+/* @keyframes scale1 {
+    0%{
+        transform: scaleY(0.9) translateY(-500px);
+    }
+    25%{
+        transform: scaleY(0.9) translateY(-400px);
+    }
+    50%{
+        transform: scaleY(0.9) translateY(-250px);
+    }
+    75%{
+        transform: scaleY(0.9) translateY(-250px);
+    }
+    100%{
+        transform: scaleY(0.9) translateY(0px);
+    }
+}
+@keyframes scale2 {
+    50%{
+        transform: scaleY(1);
+    }
+    100%{
+        transform: scaleY(0.9);
+    }
+} */
+
+
 #main_spoon{
+    top: -70px;
     position: absolute;
     right: 130px;
+    animation: swing ease-out 1.6s;
+    transform-origin: center -20px;
+    animation-fill-mode: forwards;
+}
+@keyframes swing{
+    0%{
+        transform: rotate(-25deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
 #main_contents{
     margin: 81px auto;
