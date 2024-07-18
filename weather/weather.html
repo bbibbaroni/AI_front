@@ -7,67 +7,42 @@
     <style>
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px;
         }
         body {
-            width: 100%;
-            height: 100%;
+            width: 1440px;
+            height: 900px;
             display: flex;
-            justify-content: center;
-            align-items: center;
             background-color: #f0f0f0;
         }
         .container {
             display: flex;
             background: #000;
-            width: 1440px;
-            height: 900px;
             position :relative;
-        }
-        .frame1 {
-            width: 890px;
-            height: 900px;
-            background-color: #fff;
-            padding: 103px 149px 140px 149px;
         }
         .img {
             width: 550px;
             height: 900px;
-            background: cornflowerblue;
         }
         .img img {
             width: 100%;
             height: 100%;
         }
         .st {
+            margin-bottom: 25px;
             color: #888;
-            text-align: center;
-            font-family: Inter, sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
-            line-height: 30px;
             letter-spacing: 1.6px;
         }
         .bt {
+            margin-bottom: 45px;
             color: rgba(0, 0, 0, 0.85);
-            text-align: center;
-            font-family: Inter, sans-serif;
             font-size: 40px;
-            font-style: normal;
             font-weight: 700;
-            line-height: 30px;
             letter-spacing: 4px;
-        }
-        .vst {
-            color: #696969;
-            font-family: Inter, sans-serif;
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            margin-bottom: 47px;
         }
         /* 기본 스타일 숨기기 */
         input[type="radio"] {
@@ -77,107 +52,133 @@
         .custom-radio {
             display: flex;
             align-items: center;
+            justify-content: center;
             margin: 10px 0;
             cursor: pointer;
             position:relative;
+            width: 250px;
+            height: 250px;
         }
-        /* 커스텀 라디오 버튼 스타일 */
-        .custom-radio-span {
-            width: 32px;
-            height: 32px;
-            border: 2px solid #d9d9d9;
-            background-color:#d9d9d9;
-            border-radius: 50%;
-            margin-right: 10px;
-            position: relative;
-        }
-        /* 라디오 버튼이 체크된 상태 스타일 */
-        input[type="radio"]:checked + .custom-radio-span::before {
-            content: "";
-            width: 18px;
-            height: 18px;
-            background-color: #000;
-            border-radius: 50%;
+        /* 라디오 버튼이 체크되었을 때 텍스트와 슬라이더 색상 변경 */
+        input[type="radio"]:checked + .weather::before {
             position: absolute;
-            top: 50%;
+            content: url('../images/Group\ 29.png');
+            top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        /* 라디오 버튼이 체크되었을 때 텍스트와 슬라이더 색상 변경 */
-        input[type="radio"]:checked + .custom-radio-span + .weather {
-            border : 3px solid red;
-            border-radius:100%;
-            padding-left: 15px;
-            padding-right: 5px;
-            padding-top:45px;
-            padding-bottom:30px;
-        }
         .weather {
-            color: #000;
-            text-align: center;
-            font-family: Inter;
-            font-size: 100px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 30px; /* 30% */
-            letter-spacing: 10px;
-            margin-left :120px;
+            cursor: pointer;
+            position: relative;
+            font-size: 150px;
         }
-        .checkmark-container {
-            position: absolute;
-            top: 10px; /* 적절한 위치 설정 */
-            right: 10px; /* 적절한 위치 설정 */
-            width: 248px;
-            height: 248px;
-            margin-right: 595px;
-            margin-top : 102px;
+
+        .weather_form{
+            border: 1px solid red;
+            width: 550px;
+            height: 550px;
+            display: flex;
+            margin:auto;
+            justify-content: space-between;
+            align-content: space-between;
+            flex-wrap: wrap;
+        }
+        .frame{
+            width: 889px;
+            height: 900px;
+            background-color: #fff;
+            text-align: center;
+        }
+        .custom-button {
+            width: 90%;
+            text-align: center;
+            padding: 17px;
+            font-size: 26px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #f4c04e;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: 1px solid red;
+            margin: 0px;
+        }
+        .custom-button:hover {
+            background-color: #e0a838;
+        }
+        .feel{
+            display: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="frame1">
-            <form id="surveyForm">
+        <form id="surveyForm">
+            <div class="weather frame">
+                <div class="st">더욱 정확한 추천을 위해 설문을 해주세요!</div>
+                <div class="bt">Q:오늘 날씨는 어때요?</div>
+                <div  class="weather_form">
+                    <div class="custom-radio">
+                        <input type="radio" id="option1" name="weather_option" value="a">
+                        <label class="weather" for="option1">🔆</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" id="option2" name="weather_option" value="a">
+                        <label class="weather" for="option2">☁️</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" id="option3" name="weather_option" value="a">
+                        <label class="weather" for="option3">🌧️</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" id="option4" name="weather_option" value="a">
+                        <label class="weather" for="option4">❄️</label>
+                    </div>
+                </div>
+                <button type="button" class="custom-button">다음으로</button>
+            </div>
+            <div class="feel">
                 <div style="margin-bottom: 24px;"><span class="st">더욱 정확한 추천을 위해 설문을 해주세요!</span></div>
-                <div style="margin-bottom: 67px;"><span class="bt">Q:오늘 날씨는 어때요?</span></div>
-                <div style="margin-bottom: 131px;">
-                    <label class="custom-radio" for="option1">
-                        <input type="radio" id="option1" name="options" value="a">
-                        <span class="custom-radio-span"></span>
-                        <span class="weather">🔆</span>
-                    </label>
+                <div style="margin-bottom: 67px;"><span class="bt">Q:오늘 기분은 어때요?</span></div>
+                <div style="margin-bottom: 101px;">
+                    <div class="custom-radio">
+                        <input type="radio" id="option1" name="options" value="a"/>
+                        <label class="custom-radio-span" for="option1"></label>
+                        <label class="feel" for="option1">😁행복해요</label>
+                        <label for="option1"><input type="range" class="range" min="0" max="100" value="15"></label>
+                    </div>
                 </div>
-                <div style="margin-bottom: 131px;">
-                    <label class="custom-radio" for="option2">
+                <div style="margin-bottom: 101px;">
+                    <div class="custom-radio">
                         <input type="radio" id="option2" name="options" value="a">
-                        <span class="custom-radio-span"></span>
-                        <span class="weather">☁️</span>
-                    </label>
-                    
+                        <label class="custom-radio-span" for="option2"></label>
+                        <label class="feel" for="option2">😡화나요</label>
+                        <label for="option2"><input type="range" class="range" min="0" max="100" value="15"></label>
+                    </div>
                 </div>
-                <div style="margin-bottom: 131px;">
-                    <label class="custom-radio" for="option3">
+                <div style="margin-bottom: 101px;">
+                    <div class="custom-radio">
                         <input type="radio" id="option3" name="options" value="a">
-                        <span class="custom-radio-span"></span>
-                        <span class="weather">🌧️</span>
-                    </label>
+                        <label class="custom-radio-span" for="option3"></label>
+                        <label class="feel" for="option3">😢슬퍼요</label>
+                        <label for="option2"><input type="range" class="range" min="0" max="100" value="15"></label>
+                    </div>
                 </div>
-                <div style="margin-bottom: 131px;">
-                    <label class="custom-radio" for="option4">
-                        <input type="radio" id="option4" name="options" value="a">
-                        <span class="custom-radio-span"></span>
-                        <div class="weather">❄️</div>
-                    </label>
+                <div style="margin-bottom: 101px;">
+                    <div class="custom-radio">
+                        <input type="radio" id="option4" name="options" value="a"/>
+                        <label for="option4" class="custom-radio-span"></label>
+                        <label for="option4" class="feel">😞무기력해요</label>
+                        <label for="option4"><input for="option4" type="range" class="range" min="0" max="100" value="15"></label>
+                    </div>
                     
                 </div>
+            </div>
             </form>
-        </div>
-        <div class="img">
-            <img src="./Frame 12.png" alt="Image">
-        </div>
-        <div class="checkmark-container">
-            <img src="./Group 29.png" alt="Checkmark">
-        </div>
+            <div class="img">
+                <img src="../images/Frame 12.png" alt="Image">
+            </div>
     </div>
 </body>
 </html>

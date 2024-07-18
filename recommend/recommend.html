@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recommend.css">
+    <title>식구 : 레시피 추천</title>
+</head>
+<body>
+    <div id="container">
+        <div class="frame">
+            <div class="menu">
+                <div class="menuname">음식이름</div>
+                <div class="ingredent_box">
+                    <ul id="ingredent">
+                    </ul>
+                    <script>
+                        const ingredents = ["소금", "김치", "단무지", "무", "고추장", "간장"];
+                        const listElement = document.getElementById('ingredent');;
+
+                        ingredents.map(ingredent => {
+                            const li = document.createElement('li');
+                            li.textContent = ingredent;
+                            listElement.appendChild(li);
+                        });
+                    </script>
+                </div>
+                <div class="recipe">
+                    <div class="recipetitle"><span>레시피</span><img src="../images/spoon2.png" height="25px"></div>
+                    <div class="recipetext">
+                        <p id="recipelist"></p>
+                    </div>
+                    <div class="recipearrow"><img src="../images/arrowdown.png"></div>
+                </div>
+                <div class="recipebtn">
+                <a href="../main/main.html"><button type="button" class="gomainbtn button">처음으로</button></a>
+                <button type="button" class="retrybtn button">다시하기</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="background-image"></div> 
+    </div>
+</body>
+</html>
