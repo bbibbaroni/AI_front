@@ -118,3 +118,9 @@
     background-color: white;
     color: #FFC10C;
 }
+#recipelist{
+    font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 50px; /* 250% */
+} 
