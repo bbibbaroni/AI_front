@@ -82,6 +82,7 @@
         }
         /* 커스텀 라디오 버튼 스타일 */
         .custom-radio-span {
+            cursor: pointer;
             width: 32px;
             height: 32px;
             border: 2px solid #d9d9d9;
@@ -103,18 +104,20 @@
             transform: translate(-50%, -50%);
         }
         .feel {
+            cursor: pointer;
             color: #00000080;
-text-align: center;
-font-family: Inter;
-font-size: 40px;
-font-style: normal;
-font-weight: 700;
-line-height: 30px; /* 75% */
-letter-spacing: 4px;
-margin-left : 102px;
+            text-align: center;
+            font-family: Inter;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px; /* 75% */
+            letter-spacing: 4px;
+            margin-left : 102px;
         }
         .range {
             width: 400px;
+            cursor: pointer;
             accent-color: #FFE496; /* 체크 안 됐을 때의 색상 */
             margin-top: 20px; /* 슬라이더와 텍스트 간격 */
             position: absolute;
@@ -138,43 +141,43 @@ margin-left : 102px;
                 <div style="margin-bottom: 24px;"><span class="st">더욱 정확한 추천을 위해 설문을 해주세요!</span></div>
                 <div style="margin-bottom: 67px;"><span class="bt">Q:오늘 기분은 어때요?</span></div>
                 <div style="margin-bottom: 101px;">
-                    <label class="custom-radio" for="option1">
-                        <input type="radio" id="option1" name="options" value="a">
-                        <span class="custom-radio-span"></span>
-                        <span class="feel">😁행복해요</span>
-                        <input type="range" class="range" min="0" max="100" value="15">
-                    </label>
+                    <div class="custom-radio">
+                        <input type="radio" id="option1" name="options" value="a"/>
+                        <label class="custom-radio-span" for="option1"></label>
+                        <label class="feel" for="option1">😁행복해요</label>
+                        <label for="option1"><input type="range" class="range" min="0" max="100" value="15"></label>
+                    </div>
                 </div>
                 <div style="margin-bottom: 101px;">
-                    <label class="custom-radio" for="option2">
+                    <div class="custom-radio">
                         <input type="radio" id="option2" name="options" value="a">
-                        <span class="custom-radio-span"></span>
-                        <span class="feel">😡화나요</span>
-                        <input type="range" class="range" min="0" max="100" value="15">
-                    </label>
+                        <label class="custom-radio-span" for="option2"></label>
+                        <label class="feel" for="option2">😡화나요</label>
+                        <label for="option2"><input type="range" class="range" min="0" max="100" value="15"></label>
+                    </div>
                     
                 </div>
                 <div style="margin-bottom: 101px;">
-                    <label class="custom-radio" for="option3">
+                    <div class="custom-radio">
                         <input type="radio" id="option3" name="options" value="a">
-                        <span class="custom-radio-span"></span>
-                        <span class="feel">😢슬퍼요</span>
-                        <input type="range" class="range" min="0" max="100" value="15">
-                    </label>
+                        <label class="custom-radio-span" for="option3"></label>
+                        <label class="feel" for="option3">😢슬퍼요</label>
+                        <label for="option2"><input type="range" class="range" min="0" max="100" value="15"></label>
+                    </div>
                 </div>
                 <div style="margin-bottom: 101px;">
-                    <label class="custom-radio" for="option4">
-                        <input type="radio" id="option4" name="options" value="a">
-                        <span class="custom-radio-span"></span>
-                        <div class="feel">😞무기력해요</div>
-                        <input type="range" class="range" min="0" max="100" value="15">
-                    </label>
+                    <div class="custom-radio">
+                        <input type="radio" id="option4" name="options" value="a"/>
+                        <label for="option4" class="custom-radio-span"></label>
+                        <label for="option4" class="feel">😞무기력해요</label>
+                        <label for="option4"><input for="option4" type="range" class="range" min="0" max="100" value="15"></label>
+                    </div>
                     
                 </div>
             </form>
         </div>
         <div class="img">
-            <img src="./Frame 12.png" alt="Image">
+            <img src="../images/Frame 12.png" alt="Image">
         </div>
     </div>
 </body>

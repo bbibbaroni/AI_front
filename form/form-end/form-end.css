@@ -1,0 +1,19 @@
+*{margin: 0px; padding: 0px;}
+body{
+    background-image: url('../../images/form-end-background.png');
+    background-size: cover;
+    background-color: #FFC10C;
+    width: 1440px;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btn{
+    border-radius: 1000px;
+    width: 426px;
+    height: 426px;
+}
+#btn:hover{
+    cursor: pointer;
+}

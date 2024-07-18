@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+* {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 1440px;
+    height: 900px;
+}
+.container {
+    display: flex;
+    background: #000;
+}
+.frame{
+    width: 889px;
+    height: 900px;
+    display: none;
+    background-color: #fff;
+    padding: 102px 149px;
+}
+.img {
+    width: 550px;
+    height: 900px;
+    background: #FFC10C;
+    background-image: url('../images/form1-background.png');
+    border-left: 11px solid black;
+    border-right: 11px solid black;
+}
+.st {
+    margin-bottom: 25px;
+    color: #888;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+.bt {
+    margin-bottom: 45px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+.vst {
+    color: #696969;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 57px;
+}
+/* 기본 스타일 숨기기 */
+input[type="radio"] {
+    display: none;
+}
+/* 라벨 스타일 */
+.custom-radio {
+    display: flex;
+    align-items: center;
+}
+/* 커스텀 라디오 버튼 스타일 */
+.custom-radio-span {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+/* 라디오 버튼이 체크된 상태 스타일 */
+input[type="radio"]:checked + .custom-radio-span::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.textbox {
+    cursor: pointer;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #69696959;
+    color: #696969;
+    background-color: #EFEFEF;
+}
+.custom-button {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 17px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f4c04e;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.custom-button:hover {
+    background-color: #e0a838;
+}
+.diabetes_form{
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.vegetarian_form{
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.allerge_form{
+    height: 285px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.check{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.check > *{cursor: pointer;}
+input[type="checkbox"]{
+    display: none;
+}
+.custom-checkbox{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #D9D9D9;
+    margin-right: 15px;
+}
+.checklabel{
+    background-color: #EFEFEF;
+    color: #696969;
+    border: 1px solid #696969;
+    border-radius: 20px;
+    padding: 20px;
+}
+input[type="checkbox"]:checked + .custom-checkbox{
+    background-color: greenyellow;
+}
+.anyAllerge{
+    width: 100%;
+    border: 1px solid rgba(105, 105, 105, 0.35);
+    background-color: #EFEFEF;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.anyAllerge::placeholder{
+    font-size: 16px;
+}
+.anyhatefood{
+    width: 100%;
+    border: 1px solid rgba(105, 105, 105, 0.35);
+    background-color: #EFEFEF;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.anyhatefood::placeholder{
+    font-size: 16px;
+}
